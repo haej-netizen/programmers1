@@ -7,7 +7,8 @@ def solution(array, n):
     answer = array[0]
     for i in array[1:] :                ## 절댓값구할 때 abs는 숫자에만 씌울 수 있음
         diff = abs(n-i)                 # 배열의 수와 n의 차이를 절댓값으로 만들어서 비교함
-        if diff < min_diff or (diff == min_diff and i < answer):             
+        if diff < min_diff or (diff == min_diff and i < answer):  
+###이 (~~) 조건은 동점 처리용입니다, “가장 가까운 값” 자체는 없어도 되지만,문제 요구사항에 “동일 차이면 더 작은 수 선택”이 있다면 필수
             min_diff = diff
             answer = i
     
