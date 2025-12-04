@@ -7,7 +7,7 @@ def solution(s):
         if ch not in string:
             answer.append(-1)
         else:
-            answer.append(idx - string[ch])
+            answer.append(idx - string[ch]) # 자리 차이 반환
         string[ch] = idx   ## 현재 인덱스로 최신화
 
     return answer
